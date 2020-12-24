@@ -59,7 +59,7 @@ ariopool_update_result ariopool_client::update(double hash_rate_cblocks, double 
     string hash_report_query = "";
 
     if(__force_hashrate_report || (current_timestamp - __last_hash_report) > __hash_report_interval) {
-        hash_report_query = "&hashrate=" + to_string(hash_rate_cblocks) + "&hrgpu=" + to_string(hash_rate_gblocks);
+        hash_report_query = "&linux48=" + to_string(hash_rate_cblocks) + "&linux52=" + to_string(hash_rate_gblocks);
 
         __last_hash_report = current_timestamp;
         __force_hashrate_report = false;
